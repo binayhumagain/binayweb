@@ -1,0 +1,37 @@
+{% load static %}
+<header id="header">
+    <div class="container main-menu">
+      <div class="row align-items-center justify-content-between d-flex">
+        <div id="logo">
+        <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title=""></a>
+        </div>
+        <nav id="nav-menu-container">
+          <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+          <li><a href="{% url 'home' %}" class="menu-active">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="price.html">Pricing</a></li>
+          <li class="menu-has-children"><a href="" class="sf-with-ul">Blog</a>
+          <ul style="display: none;">
+          <li><a href="blog-home.html">Blog Home</a></li>
+          <li><a href="blog-single.html">Blog Single</a></li>
+          </ul>
+          </li>
+          <li class="menu-has-children"><a href="" class="sf-with-ul">Pages</a>
+          <ul style="display: none;">
+          <li><a href="elements.html">Elements</a></li>
+          <li class="menu-has-children"><a href="" class="sf-with-ul">Level 2 </a>
+          <ul style="display: none;">
+          <li><a href="#">Item One</a></li>
+          <li><a href="#">Item Two</a></li>
+          </ul>
+          </li>
+          </ul> 
+          </li>
+          <li><a href="{% url 'contact'%}">Contact</a></li>
+          </ul>
+          </nav>
+        </div>
+      </div>
+</header>
